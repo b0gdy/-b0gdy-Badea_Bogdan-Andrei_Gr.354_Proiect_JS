@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin Panel</title>
+        <link rel="stylesheet" type="text/css" href="stiluri/admin_style.css">
+
+       
+       <style>
+           form input {
+            display: block !important;
+           }
+
+            section{
+            display: flex;
+            justify-content: center;
+           }
+       </style>
+    </head>
+    
+    <body>
+        <header>
+         <div class="container">
+       <h1>Va rugam sa va logati</h1>
+        <a class="logout" href="cazari.html">Logout</a> 
+        </div>
+        </header>
+        <section>
+            <div class="container">
+        <form name="login">
+Username<input type="text" name="userid"/>
+Password<input type="password" name="pswrd"/>
+<input class="buton" style="margin-top: 20px" type="button" onclick="check(this.form)" value="Login"/>
+</form>
+</div>
+</section>
+        
+        <footer>
+        
+            <div class="footer">
+                <a href="#" class="facebook"></a>   
+                 <a href="#" class="youtube"></a>   
+                 <a href="#" class="what"></a>   
+            </div>
+            
+            <script src="js/main.js"></script>
+            <script src="js/admin.js"></script>
+            
+        </footer>
+        
+        
+    </body>
+    
+</html>
+

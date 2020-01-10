@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin Panel</title>
+        <link rel="stylesheet" type="text/css" href="stiluri/admin_style.css">
+
+       
+    </head>
+    
+    <body>
+        <header>
+         <div class="container">
+       <h1>Pagina administrator</h1>
+        <a class="logout" href="cazari.html">Logout</a> 
+        </div>
+        </header>
+        
+        <section>
+            <div class="container">
+                <h2>Setari design</h2>
+                <h4>Culoare primara:</h4>
+                <ul class="colors">
+                    <li class="red culoare-activa" onclick="changeColor('red');"></li>
+                    <li class="blue" onclick="changeColor('blue');"></li>
+                    <li class="green" onclick="changeColor('green');"></li>
+                    <li class="orange" onclick="changeColor('orange');"></li>
+                </ul>
+            </div>
+        </section>
+         <section>
+            <div class="container">
+                <h4>Tema Disco</h4>
+                 <input type="radio" id="toggle-on" name="toggle" 
+                onclick="onDisco()"><label for="toggle-on">On</label
+                ><input type="radio" id="toggle-off" name="toggle"
+                onclick="offDisco()" checked><label for="toggle-off">Off</label>
+            </div>
+        </section>
+          <section>
+            <div class="container">
+                <h4>Muzica fundal</h4>
+                 <button onclick="playMusic()">Porneste</button>
+                 <button onclick="stopMusic()">Opreste</button>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2>Administrare hoteluri</h2>
+                <input type="text" placeholder="nume" id="nume"/>
+                <input type="text" placeholder="adresa" id="adresa"/>
+                <input type="text" placeholder="pret" id="pret"/>
+                <input type="text" placeholder="telefon" id="telefon"/>
+                <input type="text" placeholder="stele" id="stele"/>
+                <input type="submit" value="Adauga" onclick="addHotel()">
+            </div>
+        </section>
+        
+         <section class="obiective">
+            <div class="container">
+                <div id="getContent"></div>
+                <button onclick="deleteHotels()">Sterge inregistrarile</button>
+             </div>
+        </section>
+        
+        
+        <section class="obiective" style="display: none">
+            <div class="container">
+                <h2>Hoteluri</h2>
+            <div class="grid-container">
+                <a href="#" id="#hotel1" onClick="deschidePopup()">
+                <div class="left" style="background-color:#aaa;">
+                    <img src="img/cazino1.jpg"/>
+                    <div class="continut">
+                        <p id="numeHotel1"></p>
+                        <p id="adresaHotel1"></p>
+                        <p id="pretHotel1"></p>
+                        <p id="telefonHotel1"></p>
+                        <p id="steleHotel1"></p>
+                    </div>
+                </div>
+                </a>
+                <a href="#" id="#hotel2" onClick="deschidePopup()">
+                <div class="middle" style="background-color:#aaa;">
+                    <img src="img/cazino1.jpg"/>
+                    <div class="continut">
+                        <p id="numeHotel2"></p>
+                        <p id="adresaHotel2"></p>
+                        <p id="pretHotel2"></p>
+                        <p id="telefonHotel2"></p>
+                        <p id="steleHotel2"></p>
+                    </div>
+                </div>
+                    </a>
+                    <a href="#" id="#hotel3">
+                        <div class="right" style="background-color:#aaa;">
+                            <img src="img/cazino1.jpg"/>
+                            <div class="continut">
+                                <p> </p>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+           </div>
+         </section>
+
+        
+        <footer>
+        
+            <div class="footer">
+                <a href="#" class="facebook"></a>   
+                 <a href="#" class="youtube"></a>   
+                 <a href="#" class="what"></a>   
+            </div>
+            
+                 <script src="js/main.js"></script>
+            <script src="js/admin.js"></script>
+            
+        </footer>
+        
+        
+    </body>
+    
+</html>
+
